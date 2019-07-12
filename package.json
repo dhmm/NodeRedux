@@ -1,0 +1,21 @@
+{
+  "name": "ndrdx",
+  "version": "1.0.0",
+  "description": "NodeJS, Redux, Express, EJS, Materialize todo app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1" ,
+    "dev": "nodemon server.js"
+  },
+  "author": "dhmm",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "redux": "^4.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
