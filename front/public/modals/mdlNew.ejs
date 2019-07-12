@@ -1,0 +1,47 @@
+<!-- Add new modal -->
+<div id="mdlAddNew" class="modal">
+    <div class="modal-content">
+      <h4>Add new task</h4>
+      <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Placeholder" id="taskName" type="text" class="validate">
+              <label for="taskName">Task Name</label>
+            </div>         
+  
+            <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="taskDescription">Description</label>
+            </div>         
+   
+            <div class="input-field col s12">
+              <p>
+                <label>
+                  <input name="grpType" type="radio" checked />                  
+                  <span>Extension</span>
+                </label>
+            
+                <label>
+                  <input name="grpType" type="radio" />
+                  <span>Requirement</span>
+                </label>
+            
+                <label>
+                  <input name="group1" type="radio"  />
+                  <span>Feature</span>
+                </label>
+          
+                <label>
+                  <input name="grpType" type="radio"  />
+                  <span>Bug</span>
+                </label>
+              </p>
+            </div>                      
+          </div>
+        </form>
+        <div class="modal-footer">      
+          <a href="#!" class="modal-close waves-effect waves-light btn-large">Create</a>
+        </div>
+    </div>
+    
+  </div>
