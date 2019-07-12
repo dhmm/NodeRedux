@@ -1,9 +1,7 @@
-//File: ./actions/home.js
-const conlogger = require('../common/conlogger');
-conlogger('Loading home module');
+const front = require('../front');
 
-const home = (req,res) => {
-  res.end('Welcome to home');
+const home = (req,res) => {  
+  front.home(req,res);
 }
 
 module.exports = home;
