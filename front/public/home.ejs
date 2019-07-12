@@ -8,11 +8,98 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Todo tutorial</title>
   </head>
 
   <body>
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <ul class="left hide-on-med-and-down">
+            <a class="btn-floating btn-large waves-effect waves-light red btn-small"><i class="material-icons ">add</i></a>
+        </ul>
+        <a class="waves-effect  light-blue darken-4 btn btn-small">All</a>
+        <a class="waves-effect light-green darken-3 btn btn-small">Completed</a>
+        <a class="waves-effect orange darken-4 btn btn-small">Not Completed</a>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+   <div class="container">
+      <ul class="collection">
+          <li class="collection-item avatar green lime lighten-4" >
+            <i class="material-icons circle orange">extension</i>
+            <span class="title">Title</span>
+            <p>First Line</p>
+            <a href="#!" class="secondary-content">
+                <label>
+                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <span>&nbsp;</span>
+                </label>
+              </a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle blue">feedback</i>
+            <span class="title">Title</span>
+            <p>First Line</p>
+            <a href="#!" class="secondary-content">
+                <label>
+                  <input type="checkbox" class="filled-in" />
+                  <span>&nbsp;</span>
+                </label>
+              </a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle green">filter_tilt_shift</i>
+            <span class="title">Title</span>
+            <p>First Line</p>
+            <a href="#!" class="secondary-content">
+                <label>
+                  <input type="checkbox" class="filled-in" />
+                  <span>&nbsp;</span>
+                </label>
+              </a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle red">adb</i>
+            <span class="title">Title</span>
+            <p>First Line</p>
+            <a href="#!" class="secondary-content">
+              <label>
+                <input type="checkbox" class="filled-in" />
+                <span>&nbsp;</span>
+              </label>
+            </a>
+            
+          </li>
+        </ul>
+    </div>
 
+
+
+    <footer class="page-footer orange">
+        <div class="container">
+          <div class="row">
+            
+                Todo app by : <a class="orange-text text-lighten-3" href="https://github.com/dhmm">dhmm</a>
+            <br/>&nbsp;
+          </div>
+        </div>
+       
+      </footer>
+
+      
+  
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="frontfiles/materialize.min.js"></script>
+
+    <script src="js/init.js"></script>
+
+    
   </body>
 </html>
