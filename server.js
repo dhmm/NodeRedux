@@ -1,18 +1,17 @@
-require('dotenv').config();
 const express = require('express');
 const app = new express();
 const router = express.Router();
+const actions = require('./actions');
+const config = require('./config/config');
+const path = require('path');
 
-router.get('/' , (req,res)=> {
-  res.end('Hello');
-})
+app.set("view engine" , "ejs");
+app.set("views" , path.join(__dirname , '/front/public'));
 
-let host = process.env.HOST || '127.0.0.1';
-let port = process.env.PORT || '8000';
-
+router.use('/' , actions);
 app.use(router);
-app.listen(port, host ,()=> {
+app.listen(config.port, config.host ,()=> {
   if(process.env.mode == 'dev') {
-    console.log(`Server running at port ${port}`);
+    console.log(`Server running at port ${config.port}`);
   }
 })
