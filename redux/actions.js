@@ -6,5 +6,16 @@ const addTodo = ( todo ) => {
         todo: todo
     };
  };
-
- module.exports = { addTodo }
+const changeTodo = ( todo ) => {
+    return {
+        type:actionsList.CHANGE_TODO,
+        todo: todo
+    }
+}
+const deleteTodo = ( todo ) => {
+    return {
+        type:actionsList.DELETE_TODO,
+        todo : todo
+    }
+}
+ module.exports = { addTodo , changeTodo , deleteTodo }
