@@ -6,7 +6,7 @@ const { todo } = require('./components');
  const todos = require('./reducer');
 
  //action
- const { addTodo , changeTodo , deleteTodo } = require('./actions');
+ const { addTodo , changeTodo , deleteTodo , completeTodo , uncompleteTodo } = require('./actions');
 
 //store
 const store = createStore(todos);
@@ -26,4 +26,11 @@ todo2.description = "Changed todo 2";
 store.dispatch(changeTodo(todo2));
 
 store.dispatch(deleteTodo(todo3));
+
+store.dispatch(completeTodo(1));
+
+console.log(store.getState());
+
+
+store.dispatch(uncompleteTodo(1));
 console.log(store.getState());

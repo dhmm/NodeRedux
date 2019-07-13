@@ -18,4 +18,16 @@ const deleteTodo = ( todo ) => {
         todo : todo
     }
 }
- module.exports = { addTodo , changeTodo , deleteTodo }
+const completeTodo = ( todoId ) => {
+    return {
+        type:actionsList.COMPLETE_TODO,
+        todoId:todoId
+    }
+}
+const uncompleteTodo = ( todoId ) => {
+    return {
+        type:actionsList.UNCOMPLETE_TODO,
+        todoId:todoId
+    }
+}
+ module.exports = { addTodo , changeTodo , deleteTodo , completeTodo , uncompleteTodo}

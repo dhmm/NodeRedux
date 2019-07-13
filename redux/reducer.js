@@ -25,6 +25,22 @@ const counter =(state = { lastId : 0 , todos : [] } , action) => {
                 }
             });
             return state;
+        case actionsList.COMPLETE_TODO :
+            state.todos.map( (todo , index) => {
+                if(todo.id === action.todoId) {
+                    todo.completed = true;
+                    return state;
+                }
+            });
+            return state;
+        case actionsList.UNCOMPLETE_TODO :
+            state.todos.map( (todo , index) => {
+                if(todo.id === action.todoId) {
+                    todo.completed = false;
+                    return state;
+                }
+            });
+            return state;            
         default:
            return state;
     }
