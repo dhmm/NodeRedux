@@ -1,19 +1,26 @@
  let { createStore } = require('redux');
-
+//component 
+const { todo } = require('./components');
 
  //reducer
- const counter = require('./reducer');
+ const todos = require('./reducer');
 
  //action
- const { increment } = require('./actions');
+ const { addTodo } = require('./actions');
 
  //store
- const store = createStore(counter);
+ const store = createStore(todos);
 
- store.dispatch(increment());
- store.dispatch(increment());
- store.dispatch(increment());
- store.dispatch(increment());
+
+ let todo1 = new todo('todo1' , 'description1');
+ let todo2 = new todo('todo2' , 'description2');
+ let todo3 = new todo('todo3' , 'description3');
+ let todo4 = new todo('todo4' , 'description4');
+
+ store.dispatch(addTodo( todo1 ));
+ store.dispatch(addTodo( todo2 ));
+ store.dispatch(addTodo( todo3 ));
+ store.dispatch(addTodo( todo4 ));
 
 
  console.log(store.getState());

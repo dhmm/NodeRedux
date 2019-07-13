@@ -1,11 +1,14 @@
-const counter =(state = 0 , action) => {
+const actionsList = require('./actionsList');
+
+const counter =(state = { lastId : 0 , todos : [] } , action) => {
     switch (action.type)
     {
-        case 'INCREMENT' :
-            return state + 1;
-       case 'DECREMENT' :
-           return state - 1;
-       default:
+        case actionsList.ADD_TODO :
+            state.lastId = state.lastId+1;
+            action.todo.id = state.lastId;           
+            state.todos = state.todos.concat(action.todo);
+            return state;
+        default:
            return state;
     }
 }

@@ -1,7 +1,10 @@
-const increment = () => {
+const actionsList = require('./actionsList');
+
+const addTodo = ( todo ) => {
     return {
-        type: 'INCREMENT'
+        type: actionsList.ADD_TODO , 
+        todo: todo
     };
  };
 
- module.exports = { increment }
+ module.exports = { addTodo }
