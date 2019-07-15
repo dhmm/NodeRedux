@@ -1,6 +1,6 @@
 const store = require('./store');
 //action
-const { addTodo , changeTodo , deleteTodo , completeTodo , uncompleteTodo , getAll , getCompleted , getUncompleted } = require('./actions');
+const { addTodo , changeTodo , deleteTodo , completeTodo , uncompleteTodo , showAll , showCompleted , showUncompleted } = require('./actions');
 
 const redux = {}
 
@@ -51,15 +51,32 @@ redux.getActive = () => {
   let todos = reduxData;
   return todos;
 }
-
+redux.showAll = () => {
+  store.dispatch(showAll());
+  let reduxData = store.getState();
+  let todos = reduxData;
+  return todos;
+}
+redux.showCompleted= () => {
+  store.dispatch(showCompleted());
+  let reduxData = store.getState();
+  let todos = reduxData;
+  return todos;
+}
+redux.showUncompleted= () => {
+  store.dispatch(showUncompleted());
+  let reduxData = store.getState();
+  let todos = reduxData;
+  return todos;
+}
 
 //demo data
 const todoTypes = require('./todoTypes');
 const { todo } = require('./components');
 let todo1 = new todo('todo 1' , 'description 1' , todoTypes.EXTENSION);
-let todo2 = new todo('todo 2' , 'description 2' , todoTypes.FEATURE ,true);
+let todo2 = new todo('todo 2' , 'description 2' , todoTypes.FEATURE );
 let todo3 = new todo('todo 3' , 'description 3' , todoTypes.BUG);
-let todo4 = new todo('todo 4' , 'description 4' , todoTypes.REQUIREMENT ,true);
+let todo4 = new todo('todo 4' , 'description 4' , todoTypes.REQUIREMENT );
 
 store.dispatch(addTodo(todo1));
 store.dispatch(addTodo(todo2));

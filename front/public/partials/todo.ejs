@@ -1,4 +1,4 @@
-<% if(todo) { 
+<% if(todo) {     
     let color = '';
     let type = '';
     let checked = '';
@@ -31,6 +31,8 @@
     } else {
       bgColor = '';
     }
+
+    if(show == 'ALL' || show== 'COMPLETED' && todo.completed == true || show == 'UNCOMPLETED' && todo.completed == false ) {
   %>
   <li class="collection-item avatar <%- bgColor %>" >
     <i class="material-icons circle <%- color %>">
@@ -50,4 +52,6 @@
       <button onclick="openEdit(<%-todo.id%>)" class="waves-effect blue darken-3 btn-small">Edit</button>
       <button onclick="deleteTodo(<%-todo.id%>)" class="waves-effect  red darken-4 btn-small">Delete</button>
   </li>
-<% } %>
+<% 
+  }
+} %>

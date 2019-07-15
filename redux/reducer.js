@@ -6,7 +6,8 @@ const todos =(state = { lastId : 0 , visible: visibility.ALL,  todos : [] } , ac
     {
         case actionsList.ADD_TODO :
             state.lastId = state.lastId+1;
-            action.todo.id = state.lastId;           
+            action.todo.id = state.lastId;    
+            action.todo.completed = false;       
             state.todos = state.todos.concat(action.todo);
             return state;
         case actionsList.CHANGE_TODO :          

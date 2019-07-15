@@ -14,6 +14,10 @@ jQuery(document).ready(function() {
 
     $('#btnCreateTodo').click(addTodo);
     $('#btnChangeTodo').click(changeTodo);
+
+    $('#btnShowAll').click(showAll);
+    $('#btnShowCompleted').click(showCompleted);
+    $('#btnShowUncompleted').click(showUncompleted);
 })
 function addTodo()
 {  
@@ -21,7 +25,6 @@ function addTodo()
   form.append("title", $('#newTodoTaskName').val());
   form.append("description", $('#newTodoDescription').val());
   form.append("type", $("input:radio[name ='newTodoGrpType']:checked").val());
-  form.append("completed", "false");
   
   var settings = {
     "async": true,
@@ -128,6 +131,29 @@ function changeTodoStatus(id)
     });
   }
 }
-
+function showAll()
+{
+  $.ajax({
+    url: actionsURL+"all",    
+  }).done(function() {
+    location.reload();
+  });
+}
+function showCompleted()
+{
+  $.ajax({
+    url: actionsURL+"completed",    
+  }).done(function() {
+    location.reload();
+  });
+}
+function showUncompleted()
+{
+  $.ajax({
+    url: actionsURL+"uncompleted",    
+  }).done(function() {
+    location.reload();
+  });
+}
 
   

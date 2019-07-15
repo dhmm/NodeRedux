@@ -8,7 +8,7 @@ front.get('/' , (req,res) => {
 
   unirest.get(URL)
   .end( (response) => {    
-    let data = JSON.parse(response.body);    
+    let data = JSON.parse(response.body); 
     res.render('home' , { show: data.visible , todos : data.todos } );  
   });
   
