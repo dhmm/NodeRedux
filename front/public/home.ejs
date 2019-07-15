@@ -33,52 +33,16 @@
     </nav>
    <div class="container">
       <ul class="collection">
-          <li class="collection-item avatar green lime lighten-4" >
-            <i class="material-icons circle orange">extension</i>
-            <span class="title">Title</span>
-            <p>First Line</p>
-            <a href="#!" class="secondary-content">
-                <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
-                  <span>&nbsp;</span>
-                </label>
-              </a>
-          </li>
-          <li class="collection-item avatar">
-            <i class="material-icons circle blue">feedback</i>
-            <span class="title">Title</span>
-            <p>First Line</p>
-            <a href="#!" class="secondary-content">
-                <label>
-                  <input type="checkbox" class="filled-in" />
-                  <span>&nbsp;</span>
-                </label>
-              </a>
-          </li>
-          <li class="collection-item avatar">
-            <i class="material-icons circle green">filter_tilt_shift</i>
-            <span class="title">Title</span>
-            <p>First Line</p>
-            <a href="#!" class="secondary-content">
-                <label>
-                  <input type="checkbox" class="filled-in" />
-                  <span>&nbsp;</span>
-                </label>
-              </a>
-          </li>
-          <li class="collection-item avatar">
-            <i class="material-icons circle red">adb</i>
-            <span class="title">Title</span>
-            <p>First Line</p>
-            <a href="#!" class="secondary-content">
-              <label>
-                <input type="checkbox" class="filled-in" />
-                <span>&nbsp;</span>
-              </label>
-            </a>
-            
-          </li>
-        </ul>
+        <%
+        if(todos) {
+          todos.forEach( (todo)=> {
+            %>
+              <%- include('partials/todo' , { todo:todo }); %>
+            <%
+          })
+        }
+        %>
+      </ul>
     </div>
 
     <footer class="page-footer orange">

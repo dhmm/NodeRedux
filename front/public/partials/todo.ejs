@@ -1,0 +1,44 @@
+<% if(todo) { 
+    let color = '';
+    let type = '';
+    let checked = '';
+
+    if(todo.type == 'EXTENSION' ) 
+    { 
+      color = 'orange';  
+      type = 'extension'
+    } 
+    else if(todo.type == 'REQUIREMENT' ) 
+    { 
+      color = 'blue';
+      type = 'feedback';
+    } 
+    else if(todo.type == 'FEATURE' ) 
+    { 
+      color = 'green';
+      type = 'filter_tilt_shift';
+    } 
+    else if(todo.type == 'BUG' ) 
+    { 
+      color = 'red';
+      type = 'adb';
+    }
+
+    if( todo.completed == true ) {
+      checked = 'checked="checked"'
+    }
+  %>
+  <li class="collection-item avatar <% (todo.completed ? 'green lime lighten-4' : '' ) %>" >
+    <i class="material-icons circle <%- color %>">
+      <%- type %>
+    </i>
+    <span class="title"><%- todo.title %></span>
+    <p><%- todo.description %></p>
+    <a href="#!" class="secondary-content">
+        <label>
+          <input type="checkbox" class="filled-in" <%- checked %> />
+          <span>&nbsp;</span>
+        </label>
+      </a>
+  </li>
+<% } %>

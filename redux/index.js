@@ -58,4 +58,16 @@ redux.getUncompleted = () => {
   return todos;
 }
 
+//demo data
+const todoTypes = require('./todoTypes');
+const { todo } = require('./components');
+let todo1 = new todo('todo 1' , 'description 1' , todoTypes.EXTENSION);
+let todo2 = new todo('todo 2' , 'description 2' , todoTypes.FEATURE ,true);
+let todo3 = new todo('todo 3' , 'description 3' , todoTypes.BUG);
+let todo4 = new todo('todo 4' , 'description 4' , todoTypes.REQUIREMENT ,true);
+
+store.dispatch(addTodo(todo1));
+store.dispatch(addTodo(todo2));
+store.dispatch(addTodo(todo3));
+store.dispatch(addTodo(todo4));
 module.exports = redux;

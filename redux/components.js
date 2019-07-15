@@ -2,13 +2,13 @@ const todoTypes = require('./todoTypes');
 
 class todo 
 {
-    constructor(title = null , description = null , type = todoTypes.EXTENSION )
+    constructor(title = null , description = null , type = todoTypes.EXTENSION , completed = false)
     {
         this.id = null
         this.title= title;
         this.description= description;
         this.type = type;
-        this.completed= false;        
+        this.completed= completed;        
     }
 }
 module.exports = { todo }
