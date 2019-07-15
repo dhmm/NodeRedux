@@ -3,6 +3,11 @@ let actionsURL = 'http://localhost:8000/todos/';
 jQuery(document).ready(function() {           
     $('#mdlAddNew').modal();    
     $('#btnAddNew').click(function(){
+      $('#newTodoTaskName').val('');
+      $('#newTodoDescription').val('');     
+      $('#newTodoExtensionType').prop("checked", true);
+     
+     
       $('#mdlAddNew').modal('open');
     })  
     $('#mdlEdit').modal();
