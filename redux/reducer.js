@@ -1,6 +1,7 @@
 const actionsList = require('./actionsList');
+const visibility = require('./visibility');
 
-const counter =(state = { lastId : 0 , todos : [] } , action) => {
+const todos =(state = { lastId : 0 , visible: visibility,  todos : [] } , action) => {
     switch (action.type)
     {
         case actionsList.ADD_TODO :
@@ -40,9 +41,18 @@ const counter =(state = { lastId : 0 , todos : [] } , action) => {
                     return state;
                 }
             });
-            return state;            
+            return state;   
+        case actionsList.SHOW_ALL :
+            state.visible = visibility.ALL;
+          return state;
+        case actionsList.SHOW_COMPLETED :
+            state.visible = visibility.COMPLETED;
+          return state;
+        case actionsList.SHOW_UNCOMPLETED :
+            state.visible = visibility.UNCOMPLETD;
+          return state;
         default:
            return state;
     }
 }
-module.exports = counter;
+module.exports = todos;

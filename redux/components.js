@@ -5,7 +5,7 @@ class todo
         this.id = null
         this.title= title;
         this.description= description;
-        this.completed= false;
+        this.completed= false;        
     }
 }
 module.exports = { todo }
