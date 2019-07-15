@@ -57,6 +57,18 @@ redux.getUncompleted = () => {
   let todos = reduxData.todos;
   return todos;
 }
+redux.getTodo = (id) => {
+  let state = store.getState();
+  let todos = state.todos;  
+  let returnData = null;
+  todos.forEach( (todo, index) => {    
+    if(id == todo.id)
+    {
+      returnData = todo;
+    }
+  });
+  return returnData;
+}
 
 //demo data
 const todoTypes = require('./todoTypes');

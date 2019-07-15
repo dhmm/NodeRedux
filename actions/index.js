@@ -8,6 +8,8 @@ const getCompleted = require('./getCompleted');
 const getUncompleted = require('./getUncompleted');
 const getDeleteTodo = require('./getDeleteTodo');
 const postAdd = require('./postAdd');
+const getTodo = require('./getTodo');
+const postChange = require('./postChange');
 
 actions.get('/' ,getActive) ;
 actions.get('/all' , getAll);
@@ -15,8 +17,10 @@ actions.get('/completed' , getCompleted);
 actions.get('/uncompleted' , getUncompleted );
 actions.get('/delete/:id' , getDeleteTodo );
 actions.post('/add'  , upload.array() , postAdd);
+actions.get('/todo/:id' , getTodo);
+actions.post('/change'  , upload.array() , postChange);
 
-actions.get('/change')
+
 
 actions.get('/complete')
 actions.get('/uncomplete')

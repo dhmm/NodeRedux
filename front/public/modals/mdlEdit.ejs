@@ -1,0 +1,47 @@
+<!-- Add new modal -->
+<div id="mdlEdit" class="modal">
+    <div class="modal-content">
+      <h4>Edit task</h4>
+      <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Placeholder" id="editTodoTaskName" type="text" class="validate">
+              <label for="taskName">Task Name</label>
+            </div>         
+  
+            <div class="input-field col s12">
+                <textarea id="editTodoDescription" class="materialize-textarea" ></textarea>
+              <label for="taskDescription">Description</label>
+            </div>         
+   
+            <div class="input-field col s12">
+              <p>
+                <label>
+                  <input id="editTodoExtensionType" name="editTodoGrpType" value="EXTENSION" type="radio" checked />                  
+                  <span>Extension</span>
+                </label>
+            
+                <label>
+                  <input id="editTodoRequirementType" name="editTodoGrpType"  value="REQUIREMENT" type="radio" />
+                  <span>Requirement</span>
+                </label>
+            
+                <label>
+                  <input id="editTodoFeatureType" name="editTodoGrpType"  value="FEATURE" type="radio"  />
+                  <span>Feature</span>
+                </label>
+          
+                <label>
+                  <input id="editTodoBugType" name="editTodoGrpType"  value="BUG" type="radio"  />
+                  <span>Bug</span>
+                </label>
+              </p>              
+            </div>                      
+          </div>
+        </form>
+        <div class="modal-footer">      
+          <a href="#!" id="btnChangeTodo" class="modal-close waves-effect waves-light btn-large">Save</a>
+        </div>
+    </div>
+    
+  </div>

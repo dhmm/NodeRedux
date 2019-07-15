@@ -9,10 +9,13 @@ const todos =(state = { lastId : 0 , visible: visibility.ALL,  todos : [] } , ac
             action.todo.id = state.lastId;           
             state.todos = state.todos.concat(action.todo);
             return state;
-        case actionsList.CHANGE_TODO :
+        case actionsList.CHANGE_TODO :          
             state.todos.map( (todo , index) => {
-                if(todo.id === action.todo.id) {
-                    todo = action.todo;
+                if(todo.id == action.todo.id) {
+                  todo.title = action.todo.title;
+                  todo.description = action.todo.description;
+                  todo.type = action.todo.type;
+                  todo.completed = action.todo.completed;                  
                 }
             });
             return state;
