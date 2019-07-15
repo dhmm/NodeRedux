@@ -14,8 +14,7 @@ const todos =(state = { lastId : 0 , visible: visibility.ALL,  todos : [] } , ac
                 if(todo.id == action.todo.id) {
                   todo.title = action.todo.title;
                   todo.description = action.todo.description;
-                  todo.type = action.todo.type;
-                  todo.completed = action.todo.completed;                  
+                  todo.type = action.todo.type;                               
                 }
             });
             return state;

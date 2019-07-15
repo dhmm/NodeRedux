@@ -80,8 +80,7 @@ function changeTodo()
   form.append("id" , todoToChange)
   form.append("title", $('#editTodoTaskName').val());
   form.append("description", $('#editTodoDescription').val());
-  form.append("type", $("input:radio[name ='editTodoGrpType']:checked").val());
-  form.append("completed", "false");
+  form.append("type", $("input:radio[name ='editTodoGrpType']:checked").val());  
   
   var settings = {
     "async": true,
