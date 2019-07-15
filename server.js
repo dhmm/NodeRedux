@@ -10,7 +10,7 @@ const path = require('path');
 app.set("view engine" , "ejs");
 app.set("views" , path.join(__dirname , '/front/public'));
 
-router.use('/actions' , actions);
+router.use('/todos' , actions);
 router.use('/frontfiles' , frontFiles);
 router.use('/' , front);
 
