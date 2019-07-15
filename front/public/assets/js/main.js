@@ -100,13 +100,34 @@ function changeTodo()
 }
 function deleteTodo(id)
 {
-  $.ajax({
-    url: actionsURL+"delete/"+id,    
-  }).done(function() {
-      location.reload();
-  });
+  if(confirm("Are you sure ?")) {
+    $.ajax({
+      url: actionsURL+"delete/"+id,    
+    }).done(function() {
+        location.reload();
+    });
+  }
 }
-
+function changeTodoStatus(id)
+{
+  let checked = $('#chkCompleted'+id).is(":checked");
+  if(checked)
+  {
+    $.ajax({
+      url: actionsURL+"complete/"+id,    
+    }).done(function() {
+      location.reload();
+    });
+  }
+  else
+  {    
+    $.ajax({
+      url: actionsURL+"uncomplete/"+id,    
+    }).done(function() {
+      location.reload();
+    });
+  }
+}
 
 
   

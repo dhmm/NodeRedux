@@ -2,6 +2,7 @@
     let color = '';
     let type = '';
     let checked = '';
+    let bgColor = '';
 
     if(todo.type == 'EXTENSION' ) 
     { 
@@ -25,10 +26,14 @@
     }
 
     if( todo.completed == true ) {
-      checked = 'checked="checked"'
+      checked = 'checked="checked"';
+      bgColor = 'lime lighten-4';
+      console.log('TRUE');
+    } else {
+      bgColor = '';
     }
   %>
-  <li class="collection-item avatar <% (todo.completed ? 'green lime lighten-4' : '' ) %>" >
+  <li class="collection-item avatar <%- bgColor %>" >
     <i class="material-icons circle <%- color %>">
       <%- type %>
     </i>
@@ -36,7 +41,7 @@
     <p><%- todo.description %></p>
     <a href="#!" class="secondary-content">
         <label>
-          <input type="checkbox" class="filled-in" <%- checked %> />
+          <input id="chkCompleted<%-todo.id%>" onchange="changeTodoStatus(<%-todo.id%>)" type="checkbox" class="filled-in" <%- checked %> />
           <span>&nbsp;</span>
         </label>
       </a>

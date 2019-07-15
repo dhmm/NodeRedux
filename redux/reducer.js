@@ -30,7 +30,7 @@ const todos =(state = { lastId : 0 , visible: visibility.ALL,  todos : [] } , ac
             return state;
         case actionsList.COMPLETE_TODO :
             state.todos.map( (todo , index) => {
-                if(todo.id === action.todoId) {
+                if(todo.id == action.todoId) {
                     todo.completed = true;
                     return state;
                 }
@@ -38,7 +38,7 @@ const todos =(state = { lastId : 0 , visible: visibility.ALL,  todos : [] } , ac
             return state;
         case actionsList.UNCOMPLETE_TODO :
             state.todos.map( (todo , index) => {
-                if(todo.id === action.todoId) {
+                if(todo.id == action.todoId) {
                     todo.completed = false;
                     return state;
                 }
