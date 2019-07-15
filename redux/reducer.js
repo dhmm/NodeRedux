@@ -1,7 +1,7 @@
 const actionsList = require('./actionsList');
 const visibility = require('./visibility');
 
-const todos =(state = { lastId : 0 , visible: visibility,  todos : [] } , action) => {
+const todos =(state = { lastId : 0 , visible: visibility.ALL,  todos : [] } , action) => {
     switch (action.type)
     {
         case actionsList.ADD_TODO :
