@@ -21,5 +21,11 @@ redux.getCompleted = () => {
   let todos = reduxData.todos;
   return todos;
 }
+redux.getUncompleted = () => {
+  store.dispatch(getUncompleted());
+  let reduxData = store.getState();
+  let todos = reduxData.todos;
+  return todos;
+}
 
 module.exports = redux;
