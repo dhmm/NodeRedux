@@ -7,9 +7,9 @@ front.get('/' , (req,res) => {
   let URL = protocol+config.host+":"+config.port+'/todos';  
 
   unirest.get(URL)
-  .end( (response) => {
+  .end( (response) => {    
     let data = JSON.parse(response.body);    
-    res.render('home' , { todos : data } );  
+    res.render('home' , { show: data.visible , todos : data.todos } );  
   });
   
   

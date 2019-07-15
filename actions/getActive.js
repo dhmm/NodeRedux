@@ -1,8 +1,7 @@
 const redux = require('../redux');
 
 const getActive = (req,res) => {
-  reduxData = redux.getActive();
-  console.log(reduxData);
+  reduxData = redux.getActive();  
   res.end(JSON.stringify(reduxData));
 };
 

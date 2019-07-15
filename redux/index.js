@@ -34,29 +34,6 @@ redux.uncompleteTodo = (todoId) => {
   let todos = reduxData.todos;
   return todos;
 }
-redux.getActive = () => {
-  let reduxData = store.getState();
-  let todos = reduxData.todos;
-  return todos;
-}
-redux.getAll = () => {
-  store.dispatch(getAll());
-  let reduxData = store.getState();
-  let todos = reduxData.todos;
-  return todos;
-}
-redux.getCompleted = () => {
-  store.dispatch(getCompleted());
-  let reduxData = store.getState();
-  let todos = reduxData.todos;
-  return todos;
-}
-redux.getUncompleted = () => {
-  store.dispatch(getUncompleted());
-  let reduxData = store.getState();
-  let todos = reduxData.todos;
-  return todos;
-}
 redux.getTodo = (id) => {
   let state = store.getState();
   let todos = state.todos;  
@@ -69,6 +46,12 @@ redux.getTodo = (id) => {
   });
   return returnData;
 }
+redux.getActive = () => {
+  let reduxData = store.getState();
+  let todos = reduxData;
+  return todos;
+}
+
 
 //demo data
 const todoTypes = require('./todoTypes');
