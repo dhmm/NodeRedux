@@ -1,4 +1,5 @@
 const actionsList = require('./actionsList');
+const visibility = require('./visibility');
 
 const addTodo = ( todo ) => {
     return {
@@ -30,7 +31,24 @@ const uncompleteTodo = ( todoId ) => {
         todoId:todoId
     }
 }
+const getAll = ( ) => {
+  return {
+    type:actionsList.SHOW_ALL,
+    visible:visibility.ALL
+  }
+}
+const getCompleted = ( ) => {
+  return {
+    type:actionsList.SHOW_COMPLETED,
+    visible:visibility.ALL
+  }
+}
+const getUncompleted = ( ) => {
+  return {
+    type:actionsList.SHOW_UNCOMPLETED,
+    visible:visibility.ALL
+  }
+}
 
 
-
-module.exports = { addTodo , changeTodo , deleteTodo , completeTodo , uncompleteTodo }
+module.exports = { addTodo , changeTodo , deleteTodo , completeTodo , uncompleteTodo , getAll  , getCompleted , getUncompleted }
