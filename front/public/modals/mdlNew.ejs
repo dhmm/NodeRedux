@@ -5,34 +5,34 @@
       <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input placeholder="Placeholder" id="taskName" type="text" class="validate">
+              <input placeholder="Placeholder" id="newTodoTaskName" type="text" class="validate">
               <label for="taskName">Task Name</label>
             </div>         
   
             <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <textarea id="newTodoDescription" class="materialize-textarea" ></textarea>
               <label for="taskDescription">Description</label>
             </div>         
    
             <div class="input-field col s12">
               <p>
                 <label>
-                  <input name="grpType" type="radio" checked />                  
+                  <input name="newTodoGrpType" value="EXTENSION" type="radio" checked />                  
                   <span>Extension</span>
                 </label>
             
                 <label>
-                  <input name="grpType" type="radio" />
+                  <input name="newTodoGrpType"  value="REQUIREMENT" type="radio" />
                   <span>Requirement</span>
                 </label>
             
                 <label>
-                  <input name="group1" type="radio"  />
+                  <input name="newTodoGrpType"  value="FEATURE" type="radio"  />
                   <span>Feature</span>
                 </label>
           
                 <label>
-                  <input name="grpType" type="radio"  />
+                  <input name="newTodoGrpType"  value="BUG" type="radio"  />
                   <span>Bug</span>
                 </label>
               </p>
@@ -40,7 +40,7 @@
           </div>
         </form>
         <div class="modal-footer">      
-          <a href="#!" class="modal-close waves-effect waves-light btn-large">Create</a>
+          <a href="#!" id="btnCreateTodo" class="modal-close waves-effect waves-light btn-large">Create</a>
         </div>
     </div>
     

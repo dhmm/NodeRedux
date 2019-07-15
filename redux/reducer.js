@@ -16,12 +16,12 @@ const todos =(state = { lastId : 0 , visible: visibility.ALL,  todos : [] } , ac
                 }
             });
             return state;
-        case actionsList.DELETE_TODO :
+        case actionsList.DELETE_TODO :          
             let position = -1;
             state.todos.map( (todo , index) => {
-                position++;
-                if(todo.id === action.todo.id) {
-                    state.todos.splice(position, 1);
+                position++;                
+                if(todo.id == action.todoId) {
+                    state.todos.splice(position, 1);                  
                     return state;
                 }
             });

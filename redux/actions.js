@@ -13,10 +13,10 @@ const changeTodo = ( todo ) => {
         todo: todo
     }
 }
-const deleteTodo = ( todo ) => {
+const deleteTodo = ( todoId ) => {
     return {
         type:actionsList.DELETE_TODO,
-        todo : todo
+        todoId : todoId
     }
 }
 const completeTodo = ( todoId ) => {

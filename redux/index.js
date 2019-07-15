@@ -16,8 +16,8 @@ redux.changeTodo = (todo) => {
   let todos = reduxData.todos;
   return todos;
 }
-redux.deleteTodo = (todo) => {
-  store.dispatch(deleteTodo(todo));
+redux.deleteTodo = (todoId) => {  
+  store.dispatch(deleteTodo(todoId));
   let reduxData = store.getState();
   let todos = reduxData.todos;
   return todos;
